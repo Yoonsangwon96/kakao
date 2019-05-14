@@ -1,0 +1,461 @@
+@charset "utf-8";
+@import url('./reset.css');
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+    /* 가로 스크롤이 보이지 않게 한다. */
+    scroll-behavior: smooth;
+}
+
+/* header */
+header {
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #fff;
+}
+header:hover {
+    cursor: pointer;
+}
+header .main_menu a.border_link,
+header .main_menu a.border {
+    text-decoration: none;
+}
+header .main_menu.first a.border_link {
+    border-bottom: 2px solid black;
+    padding-bottom: 16px;
+}
+header .main_menu a.border_link:hover {
+    border-bottom: 2px solid black;
+    padding-bottom: 16px;
+}
+header .main_menu a.border:hover {
+    border-bottom: 2px solid black;
+    padding-bottom: 16px;
+}
+header .inner {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+header a {
+    font-size: 16px;
+    font-weight: 400;
+}
+header .logo {
+    z-index: 100;
+    position: absolute;
+    margin-top: 20px;
+}
+.bg {
+    background-color: #fff;
+}
+header .logo a {
+    display: block;
+    background: url('../img/logo_kakao.png') no-repeat;
+    width: 66px;
+    height: 20px;
+}
+header .menu_group {
+    z-index: 100;
+    display: inline-block;
+    margin-left: 55px;
+}
+header nav {
+    line-height: 60px;
+    text-align: center;
+    margin: 0 auto;
+    border: none;
+    max-width: 1160px;
+}
+header .main_menu a {
+    color: #000;
+}
+.main_menu {
+    display: inline-block;
+    padding: 0 12px;
+}
+.menu_inner {
+    z-index: 100;
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
+.menu_inner > ul {
+    margin: 0 auto;
+    width: 1200px;
+    height: 100%;
+}
+.main_menu.first .menu_inner {
+    height: 310px;
+}
+.main_menu.second .menu_inner {
+    height: 280px;
+}
+.main_menu.third .menu_inner {
+    height: 400px;
+}
+.main_menu.fourth .menu_inner {
+    height: 270px;
+}
+
+/* float, width */
+.main_menu.first .sub_menu {
+    float: left;
+    width: 16.5%;
+}
+.main_menu.second .sub_menu {
+    float: left;
+    width: 12.4%;
+}
+.main_menu.third .sub_menu {
+    float: left;
+    width: 12.4%;
+}
+.main_menu.fourth .sub_menu {
+    float: left;
+    width: 19.8%;
+}
+
+/* border, height */
+.main_menu.first .sub_menu {
+    border-left: 1px solid #ddd;
+    height: 310px;
+}
+.main_menu.first .sub_menu.six{
+    border-right: 1px solid #ddd;
+}
+.main_menu.second .sub_menu {
+    border-left: 1px solid #ddd;
+    height: 280px;
+}
+.main_menu.second .sub_menu.eight {
+    border-right: 1px solid #ddd;
+}
+.main_menu.third .sub_menu {
+    border-left: 1px solid #ddd;
+    height: 400px;
+}
+.main_menu.third .sub_menu.eight {
+    border-right: 1px solid #ddd;
+}
+.main_menu.fourth .sub_menu {
+    border-left: 1px solid #ddd;
+    height: 270px;
+}
+.main_menu.fourth .sub_menu.five {
+    border-right: 1px solid #ddd;
+}
+
+.main_menu:hover .menu_inner {
+    display: block;
+}
+.main_menu.sixth a {
+    position: relative;
+}
+header .main_menu.sixth a span.link_icon {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: -15px;
+    width: 16px;
+    height: 16px;
+}
+header .main_menu.sixth a span.link_icon {
+    background: url('../img/header_link_dark.png') no-repeat;
+}
+.sub_menu strong a {
+    padding-top: 45px;
+}
+.sub_menu a {
+    display: block;
+}
+.sub_menu strong a {
+    font-size: 14px;
+    font-weight: bold;
+}
+.sub_menu ul li a {
+    font-size: 13px;
+    color: #666 !important;
+    line-height: 30px;
+}
+.language {
+    float: right;
+}
+.language li {
+    z-index: 100;
+    float: left;
+    position: relative;
+    padding-left: 10px;
+}
+.language li a {
+    text-decoration: none;
+}
+header .language a.on {
+    color: #000;
+}
+.info {
+    background-color: #fff;
+    cursor: default;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0 auto;
+    margin-top: -1px;
+}
+.info .inner {
+    max-width: 1160px;
+}
+.info li {
+    float: left;
+}
+.info li a {
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 7px;
+}
+.info li:nth-child(1) a {
+    padding: 0;
+}
+.info li:nth-child(3) a {
+    cursor: default;
+    text-decoration: none;
+}
+.info li:last-child a {
+    color: black;
+}
+.info span {
+    display: inline-block;
+    background: url(../img/info.svg) no-repeat;
+    width: 10px;
+    height: 10px;
+}
+/* //header */
+
+
+/* content */
+
+#content {
+    margin-top: 200px;
+    border-bottom: 1px solid #ddd;
+}
+#content .inner {
+    margin: 0 auto;
+    max-width: 1160px;
+}
+#content .inner p:nth-child(1) {
+    color: black;
+    font-size: 21px;
+    font-weight: bold;
+}
+#content .inner p:nth-child(2) {
+    padding: 80px 0 60px 0;
+}
+#content .inner p:nth-child(3) {
+    padding-bottom: 150px;
+}
+#content .inner p:nth-child(3) span {
+    color: #555;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    vertical-align: top;
+    width: 800px;
+}
+#content .inner p:nth-child(3) strong {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 280px;
+}
+
+
+/* //content */
+
+/* sitemap */
+
+#sitemap {}
+#sitemap .inner {
+    margin: 0 auto;
+    max-width: 1160px;
+}
+#sitemap .inner ul .title {
+    float: left;
+    padding: 50px 25px 50px 0;
+    width: 14.6%;
+}
+#sitemap .inner ul .title:nth-last-child(1) {
+    padding: 0 0 30px 0;
+}
+#sitemap .inner ul .title:nth-last-child(2) {
+    padding: 50px 0 20px 0;
+}
+
+#sitemap .inner ul .title > a {
+    color: black;
+    font-size: 14px;
+    line-height: 50px;
+}
+#sitemap .inner ul li a {}
+#sitemap .inner ul li ul {}
+#sitemap .inner ul li ul li {}
+#sitemap .inner ul li ul li a {
+    color: #999;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+/* //sitemap */
+
+
+
+/* footer */
+footer {
+    z-index: 100;
+    font-size: 14px;
+    background-color: #222;
+    position: relative;
+    border-top: 1px solid #ccc;
+    padding: 30px 0 80px;
+}
+
+footer .inner {
+    margin: 0 auto;
+    max-width: 1160px;
+}
+footer ul li {
+    float: left;
+    margin-left: 30px;
+}
+footer ul li.none {
+    margin-left: 15px;
+}
+footer ul li.menu_first {
+    margin: 0;
+}
+footer ul li ul {
+    position: absolute;
+    bottom: 80px;
+}
+footer ul li.menu_third strong a {
+    color: #fff;
+    font-weight: bold;
+}
+footer ul li ul {
+    display: none;
+    font-size: 13px;
+    background-color: #fff;
+    border: 1px solid #d4d4d4;
+}
+footer ul li:hover ul {
+    display: block;
+    z-index: 100
+}
+footer ul li ul li {
+    margin: 10px 40px 10px 20px
+}
+footer ul li.menu_first ul {
+    left: 40px;
+}
+footer ul li.menu_second ul {
+    left: 130px;
+}
+footer ul li.menu_third ul {
+    left: 280px;
+}
+footer ul li.menu_fourth ul {
+    left: 430px;
+}
+footer ul li.menu_fifth ul {
+    left: 510px;
+}
+footer ul li.menu_seventh ul {
+    left: 740px;
+}
+footer ul li ul li {
+    float: none;
+}
+footer ul li a {
+    color: #999;
+    position: relative;
+}
+footer ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+footer ul li a:hover .open_icon {
+    background: url('../img/up.png') no-repeat;
+}
+footer ul li .open_icon {
+    transform: translate(0, -50%);
+    display: block;
+    background: url('../img/down.png') no-repeat;
+    position: absolute;
+    top: 50%;
+    right: -16px;
+    width: 12px;
+    height: 12px;
+}
+footer ul li a span.link_icon {
+    display: block;
+    background: url('../img/link.png') no-repeat;
+    position: absolute;
+    top: 3px;
+    right: -20px;
+    width: 16px;
+    height: 16px;
+}
+footer .family_site {
+    float: right;
+}
+footer .family_site li a.border {
+    border-bottom: 1.3px solid #999;
+    padding: 0 100px 5px 0;
+}
+footer .family_site li {
+    position: relative;
+}
+footer .family_site li ul {
+    bottom: 20px;
+}
+footer .family_site li span.family_icon {
+    display: block;
+    background: url('../img/sub_open.png') no-repeat;
+    position: absolute;
+    top: 30%;
+    right: 5px;
+    width: 12px;
+    height: 12px;
+}
+footer .copy {
+    color: #888;
+    display: block;
+    float: left;
+    font-size: 12px;
+    position: absolute;
+    bottom: 30%;
+}
+a.top {
+    background: url('../img/top_button.svg') no-repeat;
+    position: fixed;
+    bottom: 13%;
+    right: 2%;
+    width: 40px;
+    height: 40px;
+}
+a.top:hover {
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+/* //footer */

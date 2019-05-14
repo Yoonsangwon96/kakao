@@ -1,0 +1,11 @@
+@media screen and(max-width: 1749px) {
+    header nav {
+        padding: 0 80px;
+    }
+    footer .inner {
+        padding: 0 80px;
+    }
+    footer .copy {
+        bottom: 10%;
+    }
+}
