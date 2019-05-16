@@ -13,16 +13,24 @@ $(document).ready(function(){
             $('header, #banner').toggleClass('light, dark');
         }
   });
+
+  $( 'footer ul li' ).click(function() {
+        $(this).children('ul').toggle();
+    });
+
+    $( 'header .mobile_menu' ).click(function() {
+        $('header .menu_group').toggle();
+        $('header').toggleClass('menu');
+    });
 });
 
 $(window).on("scroll", function() {
     if ($(window).scrollTop() > 1) {
         $("header").addClass("scroll");
         $("header").addClass("bg");
-        // 화면을 스크롤하면 scroll, bg 클래스에 있는 값이 적용된다.
     }else {
         $("header").removeClass("scroll");	
         $("header").removeClass("bg");
-        // 화면을 맨 위로 올리면 scroll, bg 클래스에 있는 값이 해제된다.
     }
 });
+
