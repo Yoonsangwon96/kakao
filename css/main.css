@@ -32,7 +32,10 @@ header .main_menu a.border:hover {
     border-bottom: 2px solid black;
     padding-bottom: 16px;
 }
-header.light:hover .logo a.hover {
+header .logo a {
+    text-indent: -9999em;
+}
+header.light:hover .logo a {
     background: url('../img/logo_kakao.png') no-repeat;
 }
 header.light:hover .main_menu a {
@@ -76,12 +79,6 @@ header.scroll .logo a {
     width: 66px;
     height: 20px;
 }
-header.menu .logo a {
-    display: block;
-    background: url('../img/logo_kakao.png') no-repeat;
-    width: 66px;
-    height: 20px;
-}
 header .menu_group {
     z-index: 100;
     display: inline-block;
@@ -102,9 +99,7 @@ header.dark .main_menu a {
 header.scroll .main_menu a {
     color: #000;
 }
-header.menu .main_menu a {
-    color: #000;
-}
+
 .main_menu {
     display: inline-block;
     padding: 0 12px;
@@ -211,9 +206,6 @@ header.dark .main_menu.sixth a span.link_icon {
 header.scroll .main_menu.sixth a span.link_icon {
     background: url('../img/header_link_dark.png') no-repeat;
 }
-header.menu .main_menu.sixth a span.link_icon {
-    background: url('../img/header_link_dark.png') no-repeat;
-}
 .sub_menu strong a {
     padding-top: 45px;
 }
@@ -250,9 +242,6 @@ header.dark .language a.on {
 header.scroll .language a.on {
     color: #000;
 }
-header.menu .language a.on {
-    color: #000;
-}
 /* //header */
 
 
@@ -278,9 +267,6 @@ header.menu .language a.on {
     color: #000;
 }
 #banner.scroll .banner_slide li p {
-    color: #000;
-}
-#banner.menu .banner_slide li p {
     color: #000;
 }
 #banner button {

@@ -43,13 +43,13 @@ ul.bxslider {
 /* LOADER */
 .bx-wrapper .bx-loading {
   min-height: 50px;
-  background: url('images/bx_loader.gif') center center no-repeat #ffffff;
+  /* background: url('images/bx_loader.gif') center center no-repeat #ffffff; */
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2000;
+  z-index: 100;
 }
 /* PAGER */
 .bx-wrapper .bx-pager {

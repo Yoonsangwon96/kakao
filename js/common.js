@@ -10,7 +10,7 @@ $(document).ready(function(){
         minSlides: 1,
         maxSlides:4,
         onSlideBefore: function() {
-            $('header, #banner').toggleClass('light, dark');
+            $('header, #banner').toggleClass('dark');
         }
   });
 
@@ -20,7 +20,7 @@ $(document).ready(function(){
 
     $( 'header .mobile_menu' ).click(function() {
         $('header .menu_group').toggle();
-        $('header').toggleClass('menu');
+        $('header').addClass('menu');
     });
 });
 
